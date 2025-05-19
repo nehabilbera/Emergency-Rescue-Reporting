@@ -1,0 +1,85 @@
+/* General layout */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Filter section */
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filter-section label {
+  font-weight: 600;
+}
+
+.filter-section input[type="date"] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fff;
+}
+
+.filter-section button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Table styles */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.employee-table th, .employee-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.employee-table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+.employee-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.employee-table tbody tr:hover {
+  background-color: #e6f2ff;
+}
+
+/* Make the table responsive */
+@media (max-width: 768px) {
+  .filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .employee-table th, .employee-table td {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
+

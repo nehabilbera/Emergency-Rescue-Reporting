@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="filter-section">
+    <label for="selectedDate">📅 Select Date:</label>
+    <input type="date" id="selectedDate" [(ngModel)]="selectedDate" (ngModelChange)="onDateChange()">
+    <!-- <button (click)="filterByDate()">🔍 Submit</button> -->
+  </div>
+  <div *ngIf="employees.length > 0">
+    
+<div style="display: flex; justify-content: space-between; align-items: center;">
+   <p><b>Attendance for date</b> : {{ selectedDate }}</p>
+   <button (click)="emergency()">🚨</button>
+  </div>
+  
+  <table  class="employee-table">
+    <thead>
+      <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Checked In</th>
+        <th>Checked Out</th>
+        <th *ngIf="emer">Safe/Unsafe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{ emp.employeeId }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.checkIn }}</td>
+        <td>{{ emp.checkOut }}</td>
+        
+        <td *ngIf="emer" [style.color]="(emp.checkIn && emp.checkOut) ? 'rgb(68, 180, 68)' : (isSafe(emp.employeeId) ? 'rgb(68, 180, 68)' : 'red')">
+          <b>{{(emp.checkIn && emp.checkOut) ? 'Safe' : (employeeIds.length == 0) ? '' : (isSafe(emp.employeeId) ? 'Safe' : 'Unsafe') }}</b>
+        </td>
+      </tr>
+    </tbody>
+    
+  </table>
+  </div>
+  
+
+  <div *ngIf="employees.length === 0">
+    <p><b>No Employees records found for date :</b> {{ selectedDate }}</p>
+  </div>
+</div>
+
+

@@ -1,0 +1,43 @@
+
+<div class="container">
+  <!-- Employee Details List -->
+  <div class="employee-details-list">
+    <div class="navbar-brand">Employees List</div>
+    <br>
+    <div class="list">
+      <table class="employee-details-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Mobile</th>
+            <th>Alternate Mobile</th>
+            <th>Address</th>
+            <th>Blood Group</th>
+            <th>Medical Issues</th>
+            <th>Biometric</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of employees">
+            <td>{{ emp.employeeId }}</td>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.dob }}</td>
+            <td>{{ emp.phone_number }}</td>
+            <td>{{ emp.alternate_phone_number }}</td>
+            <td>{{ emp.address }}</td>
+            <td>{{ emp.blood_group }}</td>
+            <td>{{ emp.medical_issue }}</td>
+            
+<td class="biometric-status">
+   <span *ngIf="emp.biometric === 'Success'" class="status-success">Success</span>
+   <button *ngIf="emp.biometric === 'Pending'" class="status-pending" (click)="collectImages(emp.employeeId)">Pending</button>
+  </td>
+  
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

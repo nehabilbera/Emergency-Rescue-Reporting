@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="form-container">
+    <div class="navbar-brand">Employee Details</div>
+    <br>
+
+    <form #employeeForm="ngForm" (ngSubmit)="addEmployee(employeeForm.value)">
+      <div class="form-group">
+        <label for="employeeName">Name:</label>
+        <input type="text" id="employeeName" name="name" [(ngModel)]="employee.name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="employeeMobile">Mobile:</label>
+        <input type="text" id="employeeMobile" name="phone_number" [(ngModel)]="employee.phone_number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="employeeDob">DOB:</label>
+        <input type="date" id="employeeDob" name="dob" [(ngModel)]="employee.dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="employeeBloodGroup">Blood Group:</label>
+        <select id="employeeBloodGroup" name="blood_group" [(ngModel)]="employee.blood_group" required>
+          <option value="" disabled selected>Blood Group</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="employeeMedicalIssue">Medical Issue (if no, write NA):</label>
+        <input type="text" id="employeeMedicalIssue" name="medical_issue" [(ngModel)]="employee.medical_issue" required />
+      </div>
+
+      <div class="form-group">
+        <label for="employeeAddress">Address:</label>
+        <textarea id="employeeAddress" name="address" [(ngModel)]="employee.address" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="alternateEmployeeMobile">Alternate Mobile:</label>
+        <input type="text" id="alternateEmployeeMobile" name="alternate_phone_number" [(ngModel)]="employee.alternate_phone_number" required>
+      </div>
+
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+  </div>
+</div>

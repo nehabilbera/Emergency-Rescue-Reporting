@@ -1,0 +1,90 @@
+/* General layout */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Employee Details List */
+  .employee-details-list {
+    padding: 20px;
+  }
+  
+  .employee-details-list h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  
+  /* Table Styles */
+  .employee-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .employee-details-table th, .employee-details-table td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .employee-details-table thead {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .employee-details-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .employee-details-table tbody tr:hover {
+    background-color: #e6f2ff;
+  }
+  
+  .employee-details-table td {
+    border-top: 1px solid #ddd;
+  }
+  
+  .biometric-status {
+    text-align: center;
+  }
+  
+  .status-success {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .status-pending {
+    color: red;
+    background-color: #f8d7da;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .status-pending:hover {
+    background-color: #f5c6cb;
+  }
+  
+
+  /* Make the table responsive */
+  @media (max-width: 768px) {
+    .employee-details-table th, .employee-details-table td {
+      font-size: 12px;
+      padding: 10px 12px;
+    }
+  
+    .employee-details-list h1 {
+      font-size: 20px;
+    }
+  }

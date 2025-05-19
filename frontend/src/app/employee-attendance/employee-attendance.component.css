@@ -1,0 +1,121 @@
+/* General layout */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Attendance Form */
+  .attendanceSystem {
+    width: 300px;
+    background-color: #ffffff;
+    margin-left: 30%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .attendanceSystem form {
+    display: flex;
+    flex-direction: center;
+    gap: 12px;
+  }
+  
+  .attendanceSystem label {
+    font-weight: 600;
+  }
+  
+  .attendanceSystem input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  
+  .attendanceSystem button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .attendanceSystem button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Past Records Table */
+  .pastRecords {
+    margin-top: 40px;
+  }
+  
+  .pastRecords h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .employee-table th, .employee-table td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  .employee-table thead {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .employee-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .employee-table tbody tr:hover {
+    background-color: #e6f2ff;
+  }
+  
+  .employee-table td {
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Make the form and table responsive */
+  @media (max-width: 768px) {
+    .attendanceSystem form {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .employee-table th, .employee-table td {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+  }
+  
+  .check-in{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .check-in:hover {
+    background-color: #0056b3;
+  }
+
